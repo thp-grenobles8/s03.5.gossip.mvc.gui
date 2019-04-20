@@ -20,6 +20,8 @@ class Gossip
 
   def self.all
     all_gossips = []
+    # méthode sandwich évitable avec un .map
+    # mais plus lisible comme ça
     CSV.read(@@csv).each do |row|
       # CSV.read renvoie un array
       # qui contien un array (row) par ligne du fichier
